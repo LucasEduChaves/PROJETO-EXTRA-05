@@ -1,0 +1,138 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --ff-heading: 'Staatliches', cursive;
+  --ff-text: 'Palanquin', sans-serif;
+
+  font-size: 62.5%;
+
+  --fs-body: 1.6rem;
+  --fs-heading: 4rem;
+  --fs-text: 2rem;
+  --lh-body: 3.4rem;
+  --lh-text: 1.5rem;
+
+  --hue: 250;
+  --bg-color: hsl(233, 100%, 97%);
+  --bg-header-color: hsl(218, 17%, 62%);
+  --bg-title-color: hsl(275, 18%, 79%);
+  --bg-cards-color: hsl(312, 91%, 96%);
+  
+  --fc-color-title:  hsl(0, 0%, 100%);
+  --fc-color-text: hsl(274, 84%, 12%);
+  --fc-color-cards: hsl(232, 17%, 35%);
+}
+
+body {
+  font-size: var(--fs-body);
+  width: 100vw;
+  height: 100vh;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  margin: 0 auto;
+  padding-bottom: 6rem;
+}
+
+header {
+  background-color: var(--bg-header-color);
+  padding-bottom: 3rem; 
+  width: 100%;
+}
+
+header .ice-logo {
+  display: grid;
+  place-items: center;
+  padding: 3.2rem 0;
+}
+
+header h1 {
+  font-family: var(--ff-heading);
+  font-weight: 400;
+  font-size: var(--fs-heading);
+  line-height: var(--lh-body);
+  color: var(--fc-color-title);
+
+  width: 100%;
+  line-height: var(--fs-heading);
+}
+
+header .title {
+  background-color: var(--bg-title-color);
+  height: 5rem;
+
+  text-align: center;
+  align-items: center;
+
+  padding: 0.8rem 0;
+  display: flex;
+}
+
+main {
+  display: grid;
+  place-items: center;
+  align-items: center;
+  background-color: var(--bg-color);
+
+  width: 100%;
+  padding: 1.4rem 0 0;
+}
+
+main .text p {
+  font-weight: 400;
+
+  text-align: center;
+  
+  
+  font-size: var(--fs-text);
+  line-height: var(--lh-text);
+  color: var(--fc-color-text);
+
+  margin: 0 auto;
+  max-width: 32rem;
+  margin-bottom: 6.5rem; 
+}
+
+main .cards {
+  display: grid;
+  place-items: center;
+  gap: 3.6rem;
+  padding-inline: 3.2rem;
+}
+
+main .ice-creams {
+  max-width: 32rem;
+  position: relative;
+}
+
+main .ice-creams img {
+  width: 100%;
+  border-radius: 2rem;
+}
+
+main .ice-creams span {
+  position: absolute;
+  right: 1.6rem;
+  top: 1.6rem;
+
+  background-color: var(--bg-cards-color);
+  height: 3.5rem;
+  color: var(--fc-color-cards);
+  
+  border-radius: 2rem;
+  font-family: var(--ff-heading);
+  font-size: var(--ff-text);
+  
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding: 1rem 2.2rem;
+}
