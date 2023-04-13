@@ -31,6 +31,8 @@ body {
   font-size: var(--fs-body);
   width: 100vw;
   height: 100vh;
+
+  background-color: var(--bg-color);
 }
 
 .page {
@@ -80,7 +82,6 @@ main {
   display: grid;
   place-items: center;
   align-items: center;
-  background-color: var(--bg-color);
 
   width: 100%;
   padding: 1.4rem 0 0;
