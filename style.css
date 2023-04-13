@@ -103,6 +103,8 @@ main .text p {
 }
 
 main .cards {
+  font-family: var(--ff-heading);
+
   display: grid;
   place-items: center;
   gap: 3.6rem;
@@ -112,11 +114,23 @@ main .cards {
 main .ice-creams {
   max-width: 32rem;
   position: relative;
+
+  transition: all 500ms;
 }
 
 main .ice-creams img {
   width: 100%;
   border-radius: 2rem;
+
+  object-fit: cover;
+  filter: brightness(1);
+  
+  animation: slip 900ms;
+}
+
+main .ice-creams:hover {
+  transform: scale(1.1);
+  opacity: 0.9;
 }
 
 main .ice-creams span {
@@ -128,12 +142,38 @@ main .ice-creams span {
   height: 3.5rem;
   color: var(--fc-color-cards);
   
-  border-radius: 2rem;
-  font-family: var(--ff-heading);
+  border-radius: 2rem;  
   font-size: var(--ff-text);
   
   display: flex;
   align-items: center;
   text-align: center;
   padding: 1rem 2.2rem;
+
+  animation: rising 900ms 450ms backwards;
+}
+
+
+@keyframes rising {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+}
+
+@keyframes slip {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
