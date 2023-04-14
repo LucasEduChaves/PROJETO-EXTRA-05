@@ -209,9 +209,8 @@ footer {
    }
  }
 
-@media (min-width:1430px) {
+@media (min-width:1440px) {
   :root {
-    font-size: 62.5%;
     --ff-texting: 'Open Sans', sans-serif;
     --ff-footer: 'Roboto', sans-serif;
     
@@ -259,9 +258,10 @@ footer {
   }
 
   main .primary .cards{
+    grid-area: main;
     display: grid;
     height: 80rem;
-    padding-inline: 2.7rem;
+    padding: 0 3.5rem 0 1.4rem;
 
     grid-template-rows: 33% 33% 33%;
     grid-template-columns: 1fr 1fr 1fr;
