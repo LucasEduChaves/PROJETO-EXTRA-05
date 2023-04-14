@@ -38,7 +38,7 @@ body {
 .page {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  /* align-items: center; */
   
   margin: 0 auto;
   padding-bottom: 6rem;
@@ -64,7 +64,6 @@ header h1 {
   color: var(--fc-color-title);
 
   width: 100%;
-  line-height: var(--fs-heading);
 }
 
 header .title {
@@ -78,12 +77,16 @@ header .title {
   display: flex;
 }
 
+header .text p {
+  display: none;
+}
+
 main {
   display: grid;
-  place-items: center;
-  align-items: center;
+  margin-inline: auto;
 
-  width: 100%;
+  width: fit-content;
+  
   padding: 1.4rem 0 0;
 }
 
@@ -120,6 +123,7 @@ main .ice-creams {
 
 main .ice-creams img {
   width: 100%;
+  height: 100%;
   border-radius: 2rem;
 
   object-fit: cover;
@@ -177,3 +181,123 @@ main .ice-creams span {
     transform: translateY(0);
   }
 }
+
+@media (min-width:800px) {
+  main .cards {
+    grid-template-columns: 1fr 1fr;
+    padding: 1.5rem 0;
+  }
+}
+@media (min-height:1000px) {
+  main .primary .cards {
+    margin-top: 6.4rem;
+  }
+}
+@media (min-width:1000px) {
+  main .primary .cards {
+    margin: 0 auto;
+    
+  }
+}
+
+@media (min-width:1430px) {
+  :root {
+    font-size: 62.5%;
+    --ff-texting: 'Open Sans', sans-serif;
+    --ff-footer: 'Roboto', sans-serif;
+    
+    --fs-heading: 4.8rem;
+    --fs-text: 2.4rem;
+    --lh-body: 3.4rem;
+    --lh-text: 2rem;
+    --fc-color-white: hsla(0, 0%, 100%, 1);
+  }
+
+  header {
+    min-width: 37.7rem;
+    grid-area: header;
+    height: 100%;
+  }
+
+  .page {
+    display: grid;
+    grid-template-columns: 0.75fr 2fr;
+    grid-template-areas: "header main";
+    height: 100%;
+
+    width: 100%;
+    padding: 0;
+  }
+
+  header .title {
+    font-size: var(--fs-heading);
+    line-height: var(--lh-body);
+    color: var(--fc-color-white);
+    margin-bottom: 3.2rem;
+    height: 7rem;
+  }
+
+  header .text p {
+    color: var(--fc-color-white);
+    display: block;
+
+    font-family: var(--ff-texting);
+    font-size: var(--ff-text);
+    line-height: var(--lh-text) ;
+
+    padding-inline: 5rem;
+    text-align: center;
+  }
+
+  main .primary .cards{
+    display: grid;
+    height: 80rem;
+    padding-inline: 2.7rem;
+
+    grid-template-rows: 33% 33% 33%;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "A B C"
+                         "D B F"
+                         "D E F";
+  }
+
+  main .A {
+    grid-area: A;
+  }
+
+  main .B {
+    grid-area: D;
+  }
+  
+  main .C {
+    grid-area: B;
+  }
+
+  main .D {
+    grid-area: C;
+  }
+
+  main .E {
+    grid-area: E;
+  }
+  
+  main .F {
+    grid-area: F;
+  }
+  
+  main .text p {
+    display: none;
+  }
+
+  main .ice-creams {
+    height: 100%;
+    width: 100%;
+  }
+
+ } 
+
+ @media (min-width:1200px) {
+   .page {
+    margin: 0;
+   }
+ }
